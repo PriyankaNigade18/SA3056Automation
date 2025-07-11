@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "22220726-e21a-4bf6-a37f-00f57837f044",
+		"name": "SpecialScenario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11346496",
+		"_collection_link": "https://tester-9394.postman.co/workspace/TestAPISA3056~4aef317f-6aa8-4d34-bc51-5fde561226a1/collection/11346496-22220726-e21a-4bf6-a37f-00f57837f044?action=share&source=collection_link&creator=11346496"
+	},
+	"item": [
+		{
+			"name": "GoogleTest",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "BasicAuth",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "DigestAuth",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "BearerTokenBasic",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "githubToken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "gittoken",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.github.com/user/repos",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"user",
+						"repos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Oauth2",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://postman-echo.com",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
