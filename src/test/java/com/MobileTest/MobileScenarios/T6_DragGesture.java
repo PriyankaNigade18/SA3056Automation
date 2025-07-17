@@ -1,5 +1,7 @@
 package com.MobileTest.MobileScenarios;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.Assert;
@@ -38,7 +40,7 @@ public class T6_DragGesture {
 	  //assertion
 	  String actText=driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_result_text")).getText();
 	  String expText="Dropped!";
-	  Assert.assertEquals(actText,expText);
+	  AssertJUnit.assertEquals(actText,expText);
 	  System.out.println("Drag Gesture is completed with text: "+actText);
 	  
 	  

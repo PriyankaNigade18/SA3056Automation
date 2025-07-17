@@ -1,5 +1,6 @@
 package com.MobileTest.MobileScenarios;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.annotations.Test;

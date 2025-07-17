@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+<listener class-name="com.testlisteners.ExtentITestNGListeners"></listener>
+</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      
+      <class name="com.MobileTest.MobileScenarios.T4_ScrollGesture"/>
+      
+      <class name="com.MobileTest.MobileScenarios.T2_ClickGesture"/>
+      <class name="com.MobileTest.MobileScenarios.T6_DragGesture"/>
+      <class name="com.MobileTest.MobileScenarios.T9_KeyboardEvent"/>
+      <class name="com.MobileTest.MobileScenarios.T8_AlertHandling"/>
+      <class name="com.MobileTest.MobileScenarios.T5_SwipeGesture"/>
+      <class name="com.MobileTest.MobileScenarios.T3_LongClickGesture"/>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
