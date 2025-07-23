@@ -99,6 +99,8 @@ console.log("Last name is: "+lastName);//Nigade
 console.log("Type is: "+typeof(lastName));//String
 
 
+console.log(firstName+" "+lastName);
+
 
 let location=`Pune`;
 console.log("Location is: "+location);//Pune
@@ -132,7 +134,57 @@ let response=`{
 console.log(response);
 console.log(typeof(response));
 
+/*
+Undefined: Variable is declare without initialization always a type of undefined and
+value also undefined
+*/
 
+let orgName;
+console.log("Value for oragnization: "+orgName);// undefined
+console.log("Type is: "+typeof(orgName));// undefined
+
+//null: means unkonwn value
+let data=null;
+console.log("Data Value is: "+data);//null
+console.log("Type is: "+typeof(data));//object this is bug in js
+
+//BigInt(ES6)
+console.log(Number.MAX_VALUE);
+//1.7976931348623157e+308
+
+let bignum=7976931348623157n;
+console.log("value is: "+bignum);
+console.log("types is: "+typeof(bignum));
+
+/*Symbol: ES6 this is usefull with respect to Object
+In object to store unique key and hidden value for key we use Symbol
+
+*/
+
+let userid=Symbol("id");
+console.log(userid);
+console.log(typeof(userid));
+
+let person1={
+    "name":'Priyanka',
+    [userid]:1234
+};
+
+console.log(person1.name);
+console.log(person1.userid);
+
+
+
+/*
+//object Literal way
+let person={
+    "name":'Priyanka',
+    "id":1234
+};
+console.log(person);
+
+console.log("Type  of person: "+typeof(person));//object
+*/
 
 
 
