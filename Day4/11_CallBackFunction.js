@@ -51,7 +51,22 @@ console.log("Division is: "+(a/b));
 
 }
 
+function sub2(a,b,c)
+{
+ //console.log(a-b-c);
+ return a-b-c;
+ 
+}
+
 //executable(Business logic)
+function cal3digit(a,b,c,fun)
+{
+//fun(a,b,c);
+let res=fun(a,b,c);
+console.log("Result of return:"+res);
+
+}
+
 function calculate(n1,n2,fun)
 {
 fun(n1,n2);
@@ -60,6 +75,10 @@ fun(n1,n2);
 //call
 calculate(100,400,add);//add is call back function
 calculate(67,88,mul);
+calculate(100,30,sub);
+
+//3 digit
+cal3digit(100,20,10,sub2);
 
 
 
