@@ -88,54 +88,39 @@ parent tagname:nth-child(index)
 -----------------------------
 */
 
-describe("This is for Locators in Cypress",()=>{
+describe("Test for Locators in cypress",()=>{
 
 
-it("Test CRM login functionality",()=>{
+it("Test for Orangehrm login and logout",()=>{
 
 //open application
-cy.visit("https://automationplayground.com/crm/");
+cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
-//Locator strategy1: cy.contains(): based on visible text it will identify element
-//cy.contains("Sign In").click(); 
+//username
+cy.get("input[name='username']").type("Admin");
 
-//Locator startegy2: Using cssSelector with id
-cy.get("a#SignIn").click();
+//password
+cy.get("input[placeholder='Password']").type("admin123");
 
-//Locator startegy: Using cssSelector with id: enter email into emailInputbox
-cy.get("#email-id").type("test@gmail.com");
-
-//Locator startegy: Using cssSelector with attribute
-cy.get("input[placeholder='Password']").type("test123");
-
-/*
-checkbox/radiobutton automation
------------------------------
-check()
-uncheck()
-*/
-
-//Locator startegy: Using cssSelector with id
-cy.get("#remember").check();
-
-//add wait for 2sec like Thread.sleep() in selenium
-cy.wait(2000);
-
-//uncheck same check box
-cy.get("#remember").uncheck();
-
-cy.wait(2000);
-cy.get("#remember").check();
-
-//Locator startegy: Using cssSelector with className
-//cy.get("button.btn-primary").click();
-
-//Locator Strategy: Using tagName
+//login
 cy.get("button").click();
 
-//assertion: asserting url address
-cy.url().should("include","customers");
-cy.log("User login completed!")
+//logout
+cy.get("i.oxd-userdropdown-icon").click();
+
+//list:parent to child with indexing
+cy.get("ul.oxd-dropdown-menu>li:nth-child(4)").click();
+
+//basic
+//cy.contains("Logout").click();
+
+
+
+})
+
+
+
+
 })
 
 
@@ -144,7 +129,3 @@ cy.log("User login completed!")
 
 
 
-
-
-
-})
