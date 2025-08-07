@@ -64,7 +64,7 @@ it("Test for title of OrangeHrm",()=>{
     cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
     //to get title and print it use then()
-    cy.title().then((appTitle)=>{//here appTitle is variable whitch store current title of app
+    cy.title().then((appTitle)=>{//here appTitle is variable which store current title of app
         cy.log("Application title is: "+appTitle);
 
 
