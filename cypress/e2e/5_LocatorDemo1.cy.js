@@ -96,12 +96,14 @@ it("Test CRM login functionality",()=>{
 //open application
 cy.visit("https://automationplayground.com/crm/");
 
+cy.screenshot("HomePage");
 //Locator strategy1: cy.contains(): based on visible text it will identify element
 //cy.contains("Sign In").click(); 
 
 //Locator startegy2: Using cssSelector with id
 cy.get("a#SignIn").click();
 
+cy.screenshot("LoginPage");
 //Locator startegy: Using cssSelector with id: enter email into emailInputbox
 cy.get("#email-id").type("test@gmail.com");
 
@@ -132,6 +134,8 @@ cy.get("#remember").check();
 
 //Locator Strategy: Using tagName
 cy.get("button").click();
+
+cy.screenshot("CustomersPage");
 
 //assertion: asserting url address
 cy.url().should("include","customers");
