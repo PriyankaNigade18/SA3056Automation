@@ -127,16 +127,34 @@ await page.waitForTimeout(1500);
 test.only("Test for Xpath Methods",async({page})=>{
 
     //open application
-    await page.goto("");
+    await page.goto("https://www.amazon.in/");
 
+    //click on cart option:normalize-space():Ignore white space like trim()
+    await page.locator("(//span[normalize-space()='Cart'])[2]").click();
+
+    //assertion on url
+    await expect(page).toHaveURL(/nav_cart/);
+    console.log("CartPage Open!");
+
+    //open Sell page: text()
+    await page.locator("//a[text()='Sell']").click();
+    //assertion
+    await expect(page).toHaveURL(/sell/);
+
+    console.log("SellPage Open!");
+
+    //contains():partial match:searchbox
+    //let searchbox=await page.locator("//input[contains(@id,'searchtext')]");
+
+    //starts-with():Prefix value
+    let searchbox=await page.locator("//input[starts-with(@id,'two')]");
+    searchbox.fill("bags");
+    //keyboard key interaction is possible with the help of press()
+    searchbox.press("Enter");
     
-
-    //wait
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(2000);
 
 })
-
-
 
 
 
